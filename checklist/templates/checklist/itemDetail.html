@@ -1,0 +1,22 @@
+<h1>{{ Item }}</h1>
+
+<br>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+
+<p>Is this item displayed?</p>
+{% if  Item.itemDisplayed  == '0' %}
+<p> No </p>
+{% else %}
+<p> Yes </p>
+{% endif %}
+<br> 
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+
+</form>
+<!-- Problem- {{ Item.itemDisplayed }} displays as 0 or 1, not -->

@@ -1,0 +1,12 @@
+
+
+{% if sets_list %}
+<ul>
+{% for sets in sets_list %}
+    <li><a href="/{{ sets.id }}/"> {{ sets.set_name }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+    <p> No sets are available.</p>
+{% endif %}
+<!-- Add dropdown selector for itemDisplayed -->
