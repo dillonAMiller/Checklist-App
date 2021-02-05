@@ -6,7 +6,13 @@ class item(models.Model):
 
     ''' description of item '''
     item_desc = models.CharField(max_length=30)
+    item_set = models.CharField(max_length=30)
 
+    ''' trying to sort out relationship between item location attribute, probably want to use a model relationship'''
+
+    '''item_location = models.ForeignKey()
+    '''
+    
     ''' I don't remember what this does'''
     objects = models.Manager()
 
